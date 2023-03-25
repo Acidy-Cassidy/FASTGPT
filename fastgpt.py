@@ -33,6 +33,22 @@ def submit_query():
 root = tk.Tk()
 root.title('Chat with GPT-3')
 
+chat_history = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=80, height=20)
+chat_history.grid(row=0, column=0, pady=10, padx=10)
+chat_history.config(state=tk.DISABLED)
+
+# Create an input field for user queries
+input_field = tk.Entry(root, width=60)
+input_field.grid(row=1, column=0, pady=10, padx=10)
+
+# Create a 'Submit' button to send the user's query
+submit_button = tk.Button(root, text='Submit', command=submit_query)
+submit_button.grid(row=2, column=0, pady=10, padx=10)
+
+# Run the application
+root.mainloop()
+
+
 # Create a scrolled text widget for the chat history
 chat_history = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=80, height=20)
 chat_history.grid(row=0, column=0,
