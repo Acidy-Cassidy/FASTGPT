@@ -47,8 +47,3 @@ submit_button.grid(row=2, column=0, pady=10, padx=10)
 
 # Run the application
 root.mainloop()
-
-
-# Create a scrolled text widget for the chat history
-chat_history = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=80, height=20)
-chat_history.grid(row=0, column=0,
